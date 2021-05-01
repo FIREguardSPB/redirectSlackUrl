@@ -61,7 +61,7 @@ app.get("/slack/install", async (req, res, next) => {
     try {
         // feel free to modify the scopes
         const url = await installer.generateInstallUrl({
-            scopes: ["commands", "im:history", "incoming-webhook"],
+            scopes: ["commands", "im:history", "incoming-webhook", "channels:history", "channels:read", "users:read.email"],
         });
         res.send(
             `<a href=${url}><img alt=""Add to Slack"" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>`
@@ -87,6 +87,6 @@ app.get("/slack/oauth_redirect", async (req, res) => {
 
 app.listen(process.env.PORT || PORT, () =>
     console.log(
-        `Example app listening on port ${PORT}! Go to http://localhost:3000/slack/install to initiate oauth flow`
+        `Example app listening on port ${PORT}! Go to https://redirect-server-url.herokuapp.com/slack/install to initiate oauth flow`
     )
 );
