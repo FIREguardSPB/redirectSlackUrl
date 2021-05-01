@@ -66,7 +66,7 @@ app.get("/slack/install", async (req, res, next) => {
         "incoming-webhook",
         "channels:history",
         "channels:read",
-        "conversation:history",
+        "conversations:history",
       ],
     });
     res.send(
