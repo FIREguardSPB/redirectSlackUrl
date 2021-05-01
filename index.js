@@ -8,7 +8,7 @@ import Keyv from "keyv";
 import mongoose from "mongoose";
 
 const app = express();
-const port = 3000;
+const PORT = 3000;
 mongoose.connect(process.env.DB_URL, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
@@ -24,6 +24,7 @@ const installer = new InstallProvider({
     clientSecret: process.env.SLACK_CLIENT_SECRET,
     authVersion: "v2",
     stateSecret: "my-state-secret",
+
     logLevel: LogLevel.DEBUG,
     installationStore: {
         storeInstallation: async (installation) => {
@@ -84,8 +85,8 @@ app.get("/slack/oauth_redirect", async (req, res) => {
     await installer.handleCallback(req, res, callbackOptions);
 });
 
-app.listen(port, () =>
+app.listen(process.env.PORT || PORT, () =>
     console.log(
-        `Example app listening on port ${port}! Go to http://localhost:3000/slack/install to initiate oauth flow`
+        `Example app listening on port ${PORT}! Go to http://localhost:3000/slack/install to initiate oauth flow`
     )
 );
