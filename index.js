@@ -49,6 +49,7 @@ const installer = new InstallProvider({
       if (installQuery.teamId !== undefined) {
         // fetching single team installation
         return await keyv.get(installQuery.teamId);
+        console.log(await keyv.get(installQuery.teamId));
       }
       throw new Error("Failed fetching installation");
     },
