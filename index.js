@@ -132,7 +132,7 @@ const app = new App({
     "groups:read",
     "channels:manage",
     "chat:write",
-    "incoming-webhook",
+    // "incoming-webhook",
   ],
   installationStore: {
     storeInstallation: async (installation) => {
