@@ -64,7 +64,7 @@ app.get("/slack/install", async (req, res, next) => {
       scopes: [
         "commands",
         "im:history",
-        "incoming-webhook",
+        // "incoming-webhook",
         "channels:history",
         "channels:read",
         "chat:write",
