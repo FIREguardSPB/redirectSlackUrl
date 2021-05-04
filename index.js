@@ -140,7 +140,6 @@ const app = new App({
     "chat:write",
     "commands",
     "im:history",
-    "incoming-webhook",
     "users:read",
     "users:read.email",
   ],
