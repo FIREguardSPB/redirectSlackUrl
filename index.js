@@ -128,11 +128,21 @@ const app = new App({
   clientSecret: process.env.SLACK_CLIENT_SECRET,
   stateSecret: "my-state-secret",
   scopes: [
-    "channels:read",
-    "groups:read",
+    // "channels:read",
+    // "groups:read",
+    // "channels:manage",
+    // "chat:write",
+    // "incoming-webhook",
+    //
+    "channels:history",
     "channels:manage",
+    "channels:read",
     "chat:write",
+    "commands",
+    "im:history",
     "incoming-webhook",
+    "users:read",
+    "users:read.email",
   ],
   installationStore: {
     storeInstallation: async (installation) => {
