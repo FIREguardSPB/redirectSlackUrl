@@ -142,6 +142,7 @@ const app = new App({
     "im:history",
     "users:read",
     "users:read.email",
+    "channels:join",
   ],
   installationStore: {
     storeInstallation: async (installation) => {
