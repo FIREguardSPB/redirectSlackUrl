@@ -132,7 +132,7 @@ const app = new App({
     "groups:read",
     "channels:manage",
     "chat:write",
-    // "incoming-webhook",
+    "incoming-webhook",
   ],
   installationStore: {
     storeInstallation: async (installation) => {
@@ -172,3 +172,10 @@ const app = new App({
   await app.start(process.env.PORT || PORT);
   console.log(`⚡️ Bolt app is running! port ${PORT}`);
 })();
+
+//
+// botToken?: string;
+// userToken?: string;
+// botId?: string;
+// botUserId?: string;
+// teamId?: string;
