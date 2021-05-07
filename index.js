@@ -29,6 +29,7 @@ const app = new App({
     "users:read",
     "users:read.email",
     "channels:join",
+    "groups:history",
   ],
   installationStore: {
     storeInstallation: async (installation) => {
