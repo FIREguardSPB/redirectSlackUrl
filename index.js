@@ -32,7 +32,6 @@ const app = new App({
     "groups:history",
     "groups:history",
     "app_mentions:read",
-    "incoming-webhook",
   ],
   installationStore: {
     storeInstallation: async (installation) => {
